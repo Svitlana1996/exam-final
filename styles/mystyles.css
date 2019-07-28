@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/backgroundheader.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(159, 154, 207, 0.5);
+    color: white;
+    position: relative;
+
+}
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    
+}
+.header__menu {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Cn Rg';
+    margin-top:45px;
+    float: right;
+}
+.menu__item {
+    padding:10px;
+    margin-bottom:10px;
+}
+.menu__item a:hover {
+    color: #766cd1;
+    border-bottom: 2px solid #766cd1;
+}
+.header__logo {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+}
+.header__logo:hover {
+    cursor: pointer;
+    transform-origin: 50% 50%;
+    transform: translate(-30px, 0px) scale(1, 1.4) skew(0deg, 0deg) rotate(360deg);
+    transition: all 1s ease-in-out;
+    
+}
+.header__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PT Sans', sans-serif;
+    
+    font-size: 30px;
+    
+}
+.header__heading {
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Cn Rg';
+    font-size: 72px;
+    margin-bottom: 0;
+}
+.header__text {
+    width: 50%;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+}
+.block {
+    background-color: #ebebeb;
+}
+.block__information {
+    display: block;
+    padding-top: 120px;
+    height: 675px;
+    width: 100%;
+    color:#665f60;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+}
+.info__picture {
+    width: 35%;
+    height: 100%;
+    margin:0;
+    background-image: url(../img/DeathtoStock_Wired8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    
+}
+.info__info {
+    width:65%;
+    height: 100%;
+    margin: 0;
+    float: right;
+    padding-left:100px;
+    padding-top: 75px;
+}
+.info__text {
+    margin: 0;
+    margin-bottom: 25px;
+    width: 100%;
+} 
+.info__text:last-of-type {
+    text-align: center;
+    margin-top: 50px;
+}
+.button {
+    text-align: center;
+    height:50px;
+    width:195px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #665f60;
+}
+.button:hover {
+    background-color: #766cd1;
+    color: wheat;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.button--white {
+    border: 1px solid white;
+    color: white;
+    font-style: italic;
+}
+.ba-container {
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 100px;
+    max-width: 100%;
+ }
+.ba-grid > [class*="ba-width-"] > img {
+	display: block;
+
+}
+.ba-container,.ba-container-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.ba-grid:after {
+    clear: both;
+}
+.ba-grid + .ba-grid {
+    margin-top: 1px;
+}
+[class*="ba-width-"] {
+    width: 100%;
+}
+
+.ba-grid > [class*="ba-width-"] {
+    float: left;
+    padding-left:0;
+}
+.ba-grid {
+    margin-left:0;
+}
+.ba-grid:before, .ba-grid:after {
+    content: " ";
+    display: table;
+}
+/* img {
+    max-width: 100%;
+    height: auto;
+} */
+.ba-width-1-2 {
+    width: 50%;
+    padding: 35px;
+    background-image: url(../img/Rectangle4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:400px;
+}
+
+.ba-width-1-2--changed {
+    background-image: url(../img/Rectangle3.png);
+
+}
+
+.ba-grid--1 {
+    width: 70%;
+    float: left;
+}
+.ba-width-1-3 {
+    padding: 35px ;
+    color: white;
+    width: 30%;
+    height: 800px;
+    float: right;
+    overflow: hidden;
+    background-image: url(../img/unsplash_523ae1f5502d6_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ba-width-1-3 img {
+    padding-left: 40%;
+}
+.ba-grid__heading {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    width:100%;
+    color: #665f60;
+    margin:0;
+}
+.ba-grid__paragraph {
+    font-size: 18px;
+    color: #665f60;
+    font-family: 'PT Sans', sans-serif;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+}
+.ba-grid__paragraph--white, .ba-grid__heading--white {
+    color: white;
+}
+.ba-grid__heading--white {
+    padding-bottom: 90px;
+    font-family: 'Proxima Nova Cn Rg';
+    font-size: 35px;
+}
+
+.ba-grid__image {
+    text-align: center;
+    margin-top:50px;
+    padding-left: 45%;
+    padding-bottom: 20px;
+}
+.block-2 {
+    width:100%;
+    height:1000px;
+    background-image: url(../img/DeathtoStock_Wired3.png);
+    background-color: rgb(182, 178, 215, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.block__header {
+    padding-top: 35px;
+    width:100%;
+    text-align: center;
+    color: white;
+    font-family: 'Proxima Nova Cn Rg';
+    font-size: 36px;
+}
+.block__header--dark {
+    color: #665f60;
+}
+.block__heading {
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 20px;
+}
+.slider {
+    padding-top: 40px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom:30px;
+}
+.slider__image {
+    width: 730px;
+    height: 550px;
+}
+.slick-dots li {
+    margin: 2px;
+    width: 10px;
+}
+.slick-dots li button:before {
+    color: white;
+    font-size: 7px;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 1;
+}
+.block-3 {
+    background-color: #ebebeb;
+    width: 100%;
+    height: 820px;
+    position: relative;
+}
+.arrow {
+    position: absolute;
+    cursor: pointer;
+}
+.arrow--previous {
+    left:0;
+    top: 50%;
+}
+.arrow--next {
+    right:0;
+    top: 50%;
+}
+
+.slider-second {
+    width: 90%;
+    height:500px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.slider-second__item {
+    border: 1px solid rebeccapurple;
+    margin-right: 10px; 
+    margin-left: 10px;
+    height: 490px;
+    width: 33%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Proxima Nova Cn Rg';
+    font-size: 24px;
+    color: #9f9acf;
+}
+.slider-second__wrap {
+    text-align: center;
+    width:100%;
+    position: absolute;
+    top:50%;
+}
+.slider-second__heading {
+ text-transform: uppercase;
+ margin-bottom: 0;
+}
+.slider-second__text {
+    margin:0;
+    margin-top: 25px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+    color: #665f60;
+}
+.slider-second__image {
+    position: absolute;
+    top:0;
+    left: 5%;
+    
+}
+.slider-second__image--change {
+    width: 260px;
+    height: 258px;
+    border-radius: 50%;
+    border: 10px solid #ebebeb;
+}
+.slider-second__bgrd {
+    margin-top: 35%;
+}
+.slider-second__footer {
+    height: 70px;
+    width:350px;
+    background-color: #9f9acf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-second__footer img {
+    padding-right:10px;
+}
+#map {
+    width: 100%;
+    height: 900px;
+    display: block;
+    /* background-color: rgb(182, 178, 215, 0.5); */
+    position: relative;
+    z-index:1;
+}
+.block-4 {
+    display: block;
+    position: absolute;
+    bottom: -110%;
+    left: 0;
+    width:100%;
+    height:900px;
+    background-color: rgb(182, 178, 215, 0.7);
+    z-index: 100000;
+    
+}
+.form {
+    width:100%;
+    height:320px;
+}
+.form-container {
+    width: 60%;
+    height:auto;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+.form__input {
+    width: 100%;
+}
+.form__item, .form__textarea {
+    width:47%;
+    height:60px;
+    background-color: rgba(235, 235, 235, 0.5);
+    border: 1px transparent;
+    border-radius: 5px;
+    padding-left:25px;
+    margin-bottom: 25px;
+    color: #9f9acf;
+    
+}
+.form__item:nth-child(1) {
+    float: left;
+}
+.form__item:nth-child(2) {
+    float: right;
+}
+.form__textarea {
+    width:100%;
+    height: auto;
+    margin: 0;
+    padding-top: 25px;
+}
+.button--blue {
+    background-color: #9f9acf;
+    color: white;
+    text-transform: uppercase;
+    border: transparent;
+    border-radius: 5px;
+}
+.block-4__bar {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    width: 345px;
+    height:180px;
+    color: #665f60;
+    position: absolute;
+    top: 20%;
+    right: 0;
+
+}
+.bar__item {
+    height: 90px;
+    width: 100%;
+    display: block;
+}
+.bar__contact {
+    width: 30%;
+    background-color: #9f9acf;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bar__info{
+    background-color: rgba(235, 235, 235, 0.5);
+    height: 90px;
+    width: 70%;
+    text-align: center;
+    float: right;
+    padding: 10px 15px 0 15px;
+    display: none;
+}
+.bar__info--change {
+   padding: 0;
+   line-height: 90px;
+}
+
+.bar__info-active {
+    display: block;
+    
+}
+.block-4__scroll {
+    width: 85px;
+    height: 85px;
+    background-color: rgb(182, 178, 215, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    bottom: 8%;
+}
+.block-4__scroll:hover {
+    background-color: #766cd1;
+}
+input:focus, textarea:focus {
+    box-shadow: 0px 4px 21px -1px rgba(70,33,219,1);
+}
+input::-webkit-input-placeholder { 
+    color: white;
+    font-style: italic;
+ }
+textarea::-webkit-input-placeholder {
+    color: white;
+    font-style: italic;
+}
