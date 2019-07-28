@@ -7,18 +7,18 @@
      },
      template:`
      <div class="slider-second__item">
-         <img class="slider-second__image" v-bind:src="workers.image" alt="">
+         <img class="slider-second__image" v-bind:src="workers[0].image" alt="">
                          
          <div class="slider-second__bgrd">
              <img v-bind:src="background" alt="">
          </div>
          <div class="slider-second__wrap">
-             <h3 class="slider-second__heading">{{workers.name}}</h3>
-             <p class="slider-second__text">{{workers.position}}</p>
+             <h3 class="slider-second__heading">{{workers[0].name}}</h3>
+             <p class="slider-second__text">{{workers[0].position}}</p>
          </div>
                              
          <div class="slider-second__footer">
-             <img v-for="social in workers.workerSocial" v-bind:src="social" alt="">
+             <img v-for="social in workers[0].workerSocial" v-bind:src="social" alt="">
              
          </div>
      </div>
