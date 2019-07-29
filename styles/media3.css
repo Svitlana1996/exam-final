@@ -1,0 +1,51 @@
+@media (min-width:960px) and (max-width:1200px) {
+    .header__heading {
+        text-align: center;
+    }
+    .info__info {
+        padding-left: 80px;
+        padding-top: 55px;
+    }
+    .ba-width-1-2 {
+        padding: 0;
+    }
+    .ba-grid__heading--white {
+        padding-bottom: 70px;
+    }
+    .block-2 {
+        height: 900px;
+    }
+    .block__heading {
+        margin-top: 10px;
+        font-size: 32px;
+    }
+    .info__text:last-of-type {
+        margin-top: 30px;
+    }
+    .block-3 {
+        height: 750px;
+    }
+    #map {
+        height: 800px;
+    }
+    .block-4 {
+        height: 800px;
+        bottom: -106.5%;
+    }
+    .form-container {
+        width: 90%;
+    }
+    .block-4__bar {
+        top: 10%;
+    }
+    .block-4__scroll {
+        right: 3%;
+    }
+    .footer__left, .footer__right {
+        width:50%;
+    }
+    .footer__right img {
+        padding: 0 10px 0 10px;
+    }
+
+}

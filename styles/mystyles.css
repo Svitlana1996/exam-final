@@ -92,6 +92,7 @@ a:visited {
     font-size: 20px;
 }
 .info__picture {
+    padding-top: 65px;
     width: 35%;
     height: 100%;
     margin:0;
@@ -99,7 +100,15 @@ a:visited {
     background-repeat: no-repeat;
     background-size: cover;
     float: left;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
     
+}
+.info__picture h3 {
+    margin:0;
+    margin-top: 25px;
 }
 .info__info {
     width:65%;
@@ -271,9 +280,14 @@ a:visited {
     margin: 0 auto;
     padding-bottom:30px;
 }
-.slider__image {
+.slider__item {
     width: 730px;
     height: 550px;
+}
+.slider__item img {
+    width:100%;
+    height:100%;
+
 }
 .slick-dots li {
     margin: 2px;
@@ -313,7 +327,7 @@ a:visited {
     margin-top: 25px;
 }
 .slider-second__item {
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     margin-right: 10px; 
     margin-left: 10px;
     height: 490px;
@@ -327,8 +341,10 @@ a:visited {
 .slider-second__wrap {
     text-align: center;
     width:100%;
-    position: absolute;
-    top:50%;
+    padding-bottom: 25px;
+    background-image: url(../img/Grid-Nama-Posisi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .slider-second__heading {
  text-transform: uppercase;
@@ -336,16 +352,16 @@ a:visited {
 }
 .slider-second__text {
     margin:0;
-    margin-top: 25px;
+    margin-top: 20px;
     font-family: 'PT Sans', sans-serif;
     font-style: italic;
     color: #665f60;
 }
-.slider-second__image {
-    position: absolute;
-    top:0;
-    left: 5%;
-    
+.wrap-for-image {
+    width:100%;
+    display: flex;
+    justify-content: center;
+
 }
 .slider-second__image--change {
     width: 260px;
@@ -353,19 +369,23 @@ a:visited {
     border-radius: 50%;
     border: 10px solid #ebebeb;
 }
-.slider-second__bgrd {
-    margin-top: 35%;
-}
+
 .slider-second__footer {
     height: 70px;
-    width:350px;
+    width:100%;
     background-color: #9f9acf;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:0 10px 0 10px;
+    margin:0;
 }
 .slider-second__footer img {
-    padding-right:10px;
+    padding: 0 6px 0 6px;
+}
+.slider-second__footer img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 #map {
     width: 100%;
@@ -437,7 +457,8 @@ a:visited {
     color: #665f60;
     position: absolute;
     top: 20%;
-    right: 0;
+    right:0;
+    
 
 }
 .bar__item {
@@ -454,16 +475,24 @@ a:visited {
     height: 90px;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 0;
     
+}
+.change-position {
+    right: 70%;
+    transition: all 0.3s ease-in-out;
 }
 .bar__info{
     background-color: rgba(235, 235, 235, 0.5);
     height: 90px;
-    width: 70%;
+    width:70%;
     text-align: center;
     float: right;
     padding: 10px 15px 0 15px;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    
 }
 .bar__info--change {
    padding: 0;
@@ -471,7 +500,9 @@ a:visited {
 }
 
 .bar__info-active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: 2s;
     
 }
 .block-4__scroll {
@@ -489,7 +520,7 @@ a:visited {
     background-color: #766cd1;
 }
 input:focus, textarea:focus {
-    box-shadow: 0px 4px 21px -1px rgba(70,33,219,1);
+    box-shadow: 0px 4px 21px -1px rgb(110, 84, 214);
 }
 input::-webkit-input-placeholder { 
     color: white;
@@ -498,4 +529,49 @@ input::-webkit-input-placeholder {
 textarea::-webkit-input-placeholder {
     color: white;
     font-style: italic;
+}
+.footer {
+    width: 100%;
+    height: 185px;
+    background-color: #9f9acf;
+    color: white;
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+}
+.footer__left, .footer__right {
+    width:40%;
+    display: inline-block;
+    line-height: 185px;
+}
+.footer__left {
+    padding-left: 20px;
+    float: left;
+}
+.footer__right {
+    padding-right: 20px;
+    float: right;
+    text-align: center;
+}
+.footer__right img {
+    padding: 0 12px 0 12px;
+}
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+.footer__right img:hover {
+    cursor: pointer;
+    animation: bounce 0.7s;
 }

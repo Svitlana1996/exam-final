@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/mystyles.css">
+    <link rel="stylesheet" href="styles/media2.css" media="(min-width:768px) and (max-width:960px)">
+    <link rel="stylesheet" href="styles/media3.css" media="(min-width:960px) and (max-width:1200px)">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
@@ -37,6 +39,8 @@
         <div class="container">
             <div class="block__information info">
                 <div class="info__picture">
+                    <img src="img/Icon-AboutUs.png" alt="">
+                    <h3>About Us</h3>
                     <!-- <img src="img/DeathtoStock_Wired8.png" alt="image here"> -->
                 </div>
                 <div class="info__info">
@@ -133,77 +137,7 @@
              </div>
              <div class="slider-wrap">
                  <div class="slider-second" id="slider2">
-                     <user-info v-for="worker in workers" :workers="workers"></user-info>
-                     <!-- <div class="slider-second__item">
-                         <img class="slider-second__image" src="img/boy.png" alt="">
-                         
-                         <div class="slider-second__bgrd">
-                             <img src="img/Grid-Nama-Posisi.png" alt="">
-                         </div>
-                         <div class="slider-second__wrap">
-                             <h3 class="slider-second__heading">Miguel Obrien</h3>
-                             <p class="slider-second__text">CEO & Founder</p>
-                         </div>
-                             
-                         <div class="slider-second__footer">
-                             <img src="img/linked-in.png" alt="">
-                             <img src="img/google+.png" alt="">
-                             <img src="img/facebook.png" alt="">
-                             <img src="img/twitter.png" alt="">
-                         </div>
-                     </div> -->
-                     <div class="slider-second__item">
-                            <img class="slider-second__image" src="img/red-girl.png" alt="">
-                            <div class="slider-second__bgrd">
-                                <img src="img/Grid-Nama-Posisi.png" alt="">
-                            </div>
-                            <div class="slider-second__wrap">
-                                    <h3 class="slider-second__heading">Jackie Carroll</h3>
-                                    <p class="slider-second__text">Art Director</p>
-                             </div>
-                            <div class="slider-second__footer">
-                                <img src="img/behance.png" alt="">
-                                <img src="img/linked-in.png" alt="">
-                                <img src="img/google+.png" alt="">
-                                <img src="img/facebook.png" alt="">
-                                <img src="img/twitter.png" alt="">
-                            </div>
-
-                     </div>
-                     <div class="slider-second__item">
-                            <img class="slider-second__image" src="img/girl.png" alt="">
-                            <div class="slider-second__bgrd">
-                                <img src="img/Grid-Nama-Posisi.png" alt="">
-                            </div>
-                            <div class="slider-second__wrap">
-                                    <h3 class="slider-second__heading">Ida Morrison</h3>
-                                    <p class="slider-second__text">Designer</p>
-                            </div>
-                            <div class="slider-second__footer">
-                                <img src="img/behance.png" alt="">
-                                <img src="img/linked-in.png" alt="">
-                                <img src="img/google+.png" alt="">
-                                <img src="img/facebook.png" alt="">
-                                <img src="img/twitter.png" alt="">
-                            </div>    
-                     </div>
-                     <div class="slider-second__item">
-                            <img class="slider-second__image slider-second__image--change" src="img/woman.png" alt="">
-                            <div class="slider-second__bgrd">
-                                <img src="img/Grid-Nama-Posisi.png" alt="">
-                            </div>
-                            <div class="slider-second__wrap">
-                                    <h3 class="slider-second__heading">Melinda Brown</h3>
-                                    <p class="slider-second__text">HR Specialist</p>
-                            </div>
-                            <div class="slider-second__footer">
-                                <img src="img/behance.png" alt="">
-                                <img src="img/linked-in.png" alt="">
-                                <img src="img/facebook.png" alt="">
-                                <img src="img/twitter.png" alt="">
-                            </div>
-                     </div>
-
+                     <user-info v-for="worker in workers" :worker="worker"></user-info>
                  </div>
                  <div class="arrow arrow--previous">
                      <img src="img/interface - arrow left1.png" alt="arrows">
@@ -220,17 +154,18 @@
                                 <img class="block__icon" src="img/layer7.png" alt="icon">
                                 <h3 class="block__heading">Get in Touch</h3>
                          </div>
-                         <div class="form-container">
-                            <div class="form">
+                         <div id="form" class="form-container">
+                             <form-for-user @message-sent="addMessage"></form-for-user>
+                            <!-- <div class="form">
                                 <div class="form__input">
                                      <input type="text" name="name" placeholder="Your name" class="form__item">
                                      <input type="email" name="email" placeholder="Your email" class="form__item">
                                 </div>
                                 
                                  <textarea name="message" placeholder="Your message" cols="30" rows="10" class="form__textarea"></textarea>
-                             </div> 
+                             </div>  -->
                          </div>
-                         <p class="info__text"><button class="button button--blue">Send message</button></p>
+                         <!-- <p class="info__text"><button class="button button--blue">Send message</button></p> -->
         
                          
                 </div>
@@ -258,11 +193,27 @@
     <div id="map">
            
     </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer__left">
+                <span>2014 <b>tulus</b>driyo.</span>
+                <span>All Rights Reserved.</span>
+
+            </div>
+            <div class="footer__right">
+                    <img src="img/behance.png" alt="">
+                    <img src="img/linked-in.png" alt="">
+                    <img src="img/google+.png" alt="">
+                    <img src="img/facebook.png" alt="">
+                    <img src="img/twitter.png" alt="">
+            </div>
+        </div>
+    </div>
     
     
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Conpehdox7DavJ-IGmMAnSj4Q3wi1SQ&language=en&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Conpehdox7DavJ-IGmMAnSj4Q3wi1SQ&language=en"></script>
     <script src="script/bundles/jquery-3.4.1.min.js"></script>
     <script src="script/bundles/slick.min.js"></script>
     <script src="script/myscript.js"></script>

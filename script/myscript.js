@@ -21,7 +21,21 @@ $(document).ready(function(){
         slidesToScroll: 1,
         prevArrow: '.arrow--previous',
         nextArrow: '.arrow--next',
-        arrows:true
+        arrows:true,
+        responsive: [
+            {
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
                                  
     })
    });
@@ -206,6 +220,7 @@ $(document).ready(function(){
             icon:'../img/marker.png'
           });
  };
+ 
  $("a").click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top;
@@ -214,13 +229,15 @@ $(document).ready(function(){
 });
 
 $('.bar__contact').click(function(){
+    $(this).toggleClass('change-position');
     if($(this).next('.bar__info')) {
-        $(this).next('.bar__info').toggleClass('bar__info-active')
+        $(this).next('.bar__info').toggleClass('bar__info-active');
     }else {
         $('.bar__info').removeClass('bar__info-active');
-        $(this).next('.bar__info').addClass('bar__info-active')
+        $(this).next('.bar__info').addClass('bar__info-active');
     }
 });
+initMap();
 
  
     
