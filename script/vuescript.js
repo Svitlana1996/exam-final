@@ -92,21 +92,21 @@
     
  });
  Vue.component('form-for-user', {
-    
+         
      template: `
-     <div class="form" @submit="onSubmit">
-         <p class="error" v-if="errors.length">
-         Please, correct the error(s):
-         <ul>
-         <li v-for="error in errors">{{error}}</li>
+     <div class="form">
+         <p v-if="errors.length" class="error"> Please, fill in the following information:
+         <ul class="data">
+             <li v-for="error in errors">{{ error }}</li>
          </ul>
          </p>
-         <div class="form__input">
-             <input type="text" name="name" placeholder="Your name" class="form__item" v-model="name">
-             <input type="email" name="email" placeholder="Your email" class="form__item" v-model="email">
-         </div>
-         <textarea name="message" placeholder="Your message" cols="30" rows="10" class="form__textarea" v-model="message"></textarea>
-         <p class="info__text"><button type="submit" class="button button--blue">Send message</button></p>
+         <form class="form__input" @submit.prevent="onSubmit">
+             <input type="text" name="name" class="form__item" v-model="name">
+             <input type="email" name="email" class="form__item" v-model="email" >
+             <textarea cols="30" rows="10" class="form__textarea" v-model="message" ></textarea>
+             <button type="submit" class="button button--blue">Send message</button>
+         <form>
+         
      </div> 
      `,
      data: function(){
@@ -126,15 +126,20 @@
                 email: this.email,
                 message: this.message
              }
-             console.log(filling);
-             this.$emit('message-sent', filling);
-             this.name = null,
-             this.email = null,
-             this.message = null 
+            console.log(filling);
+            this.name = null,
+            this.email = null,
+            this.message = null
              } else {
-                 if(!this.name) this.errors.push('Name required');
-                 if(!this.email) this.errors.push('Email required');
-                 if(!this.message) this.errors.push('Message required');
+                 if(!this.name){
+                     this.errors.push('Name required!');
+                 }
+                 if(!this.email){
+                    this.errors.push('Email-address required!'); 
+                 }
+                 if(!this.message){
+                   this.errors.push('Message required!');  
+                 }
              }
              
          }
