@@ -1,0 +1,127 @@
+@media (min-width:500px) and (max-width:768px) {
+    .container {
+        width:90%;
+    }
+    .header__menu {
+        font-size: 18px;
+    }
+    .header__logo {
+        left: 10px;
+    }
+    .header__info {
+        font-size: 24px;
+    }
+    .header__heading {
+        font-size: 56px;
+        text-align: center;
+    }
+    .block__information {
+        height: 576px;
+       padding-top: 80px;
+       font-size: 16px;
+    }
+    .info__picture {
+        font-size: 30px;
+        width: 36%;
+    }
+    .info__info {
+        padding-left: 20px;
+        padding-top: 45px;
+        width: 64%;
+    }
+    .button {
+        width: 175px;
+    }
+    .info__text:last-of-type {
+        margin-top: 30px;
+    }
+    .ba-container {
+        padding-top: 60px;
+    }
+    .ba-grid__image {
+        margin-top: 25px;
+        padding-left: 40%;
+    }
+    .ba-width-1-2 {
+        padding: 15px;
+        height: 270px;
+    }
+    .ba-grid__paragraph {
+        font-size: 16px;
+     }
+    .ba-grid__heading {
+        font-size: 18px;
+    }
+    .ba-width-1-3 {
+        height: 540px;
+        padding: 15px;
+    }
+    .ba-grid__heading--white {
+        padding-bottom: 30px;
+    }
+    .block__heading {
+        margin-top: 0;
+        font-size: 30px;
+    }
+    .block-2 {
+        height: 850px;
+    }
+    .slider__item {
+        height: 450px;
+    }
+    .block-3 {
+        height: 720px;
+    }
+    #map {
+        height: 750px;
+    }
+    .block-4 {
+        height: 755px;
+        bottom: -105%;
+    }
+    .form-container {
+        width: 95%;
+        margin-top: 15%;
+    }
+    .form__item {
+        width: 100%;
+    }
+    .block-4__bar {
+        top: 5%;
+        width:300px;
+        height: auto;
+        font-size: 15px;
+    }
+    .bar__info {
+        padding-top: 3px;
+    }
+    .bar__contact, .bar__info {
+        height: 60px;
+    }
+    .bar__contact {
+        width:20%;
+    }
+    .bar__item {
+        height:65px;
+    }
+    .bar__info--change {
+        line-height: 60px;
+    }
+    .block-4__scroll {
+        width: 50px;
+        height: 50px;
+        right: 5%;
+    }
+    .footer {
+        height: 150px;
+        font-size: 14px;
+    }
+    .footer__left, .footer__right {
+        width:50%;
+        line-height: 150px;
+    }
+    .footer__right img {
+        padding: 0 5px 0 5px;
+    }
+
+}
