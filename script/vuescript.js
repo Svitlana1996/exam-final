@@ -101,9 +101,9 @@
          </ul>
          </p>
          <form class="form__input" @submit.prevent="onSubmit">
-             <input type="text" name="name" class="form__item" v-model="name">
-             <input type="email" name="email" class="form__item" v-model="email" >
-             <textarea cols="30" rows="10" class="form__textarea" v-model="message" ></textarea>
+             <input type="text" name="name" placeholder="Your name" class="form__item" v-model="name">
+             <input type="email" name="email" placeholder="Your email" class="form__item" v-model="email" >
+             <textarea cols="30" rows="10" placeholder="Your message" class="form__textarea" v-model="message" ></textarea>
              <button type="submit" class="button button--blue">Send message</button>
          <form>
          
