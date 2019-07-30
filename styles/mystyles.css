@@ -460,13 +460,12 @@ a:visited {
     border: 2px solid rgb(177, 18, 18);
     font-size: 18px;
     font-family: 'PT Sans', sans-serif;
-    margin-bottom: 50px;
+    margin: 0;
+    margin-bottom: 30px;
 }
 .data {
     color: red;
-}
-.red {
-    border: 2px solid red;
+    margin: 3px;
 }
 
 .button--blue {

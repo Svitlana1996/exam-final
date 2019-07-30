@@ -95,7 +95,7 @@
          
      template: `
      <div class="form">
-         <p v-if="errors.length" class="error"> Please, fill in the following information:
+         <p v-if="isEditing && errors.length" class="error"> Please, fill in the following information:
          <ul class="data">
              <li v-for="error in errors">{{ error }}</li>
          </ul>
@@ -114,7 +114,8 @@
              name: null,
              email: null,
              message: null,
-             errors: []
+             errors: [],
+             isEditing: true
 
          }
      },
@@ -130,6 +131,7 @@
             this.name = null,
             this.email = null,
             this.message = null
+            this.isEditing = false
              } else {
                  if(!this.name){
                      this.errors.push('Name required!');
@@ -140,9 +142,11 @@
                  if(!this.message){
                    this.errors.push('Message required!');  
                  }
-             }
+                 
+             } 
              
          }
+        
      }
 
  });
